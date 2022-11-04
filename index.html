@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* body {
+            background-color: black;
+            color: white;
+        } */
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background-color: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 30%;
+            opacity: 0.9;
+        } */
+
+        button:hover {
+            opacity: 1;
+        }
+
+        #demo1 {
+            padding: 16px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            margin-left: 50%;
+        }
+
+        #demo2 {
+            padding: 16px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            margin-right: 50%;
+        }
+
+        /* @media screen and (max-width: 300px) {
+
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        } */
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        li {
+            float: left;
+        }
+
+        li button {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li button:hover {
+            background-color: green;
+        }
+
+        p {
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Friends Chat</h1>
+
+
+    <!-- This code is for designing the homepage for our website -->
+    <h2>Welcome to friends chat</h2>
+    <ul>
+        <li><button type="button" onclick="Home()">Home</button></li>
+        <li><button type="button" onclick="Log_In()">signin</button></li>
+        <li><button type="button" onclick="Sign_Up()">SignUp</button></li>
+        <li><button type="button" onclick="Clear()">Clear</button></li>
+    </ul>
+    <p id="demo">Our web application is free of cost so you can enjoy with your friends without any disturbance</p>
+    <!-- For Login form -->
+    <div id="demo1">
+        <form method="post" id="Log_in" action="index.php">
+            UserName: <input type="text" name="fname" id="Log" placeholder="Enter Username">
+            Password: <input type="password" name="passwd" id="Log" placeholder="Enter password">
+            <button type="submit" id="Log">Log-In</button>
+        </form>
+    </div>
+    </pre>
+    <!-- For Signup form -->
+    <div id="demo2" action="index.php" id="signup">
+        <form method="post"></form>
+        FirstName: <input type="text" name="fname" id="fname">
+        SurName: <input type="text" name="lname" id="lname">
+        UserName: <input type="text" name="uname" id="uname" placeholder="Choose unique username">
+        E-Mail: <input type="text" name="mail" id="mail" placeholder="Enter e-mail address">
+        Password: <input type="password" name="passwd" id="passwd" placeholder="Enter password">
+        Confirm Password: <input type="password" name="cpasswd" id="cpasswd" placeholder="Confirm password">
+        <button type="submit">SignUp</button>
+        </form>
+    </div>
+
+    <script>prompt&#40;1)</script>
+    <script>
+        // When the log in button is pressed then the log in form appears
+        // function LogIn() {
+        
+        document.getElementById("demo").style.display = "none";
+        document.getElementById("demo1").style.display = "none";
+        // }
+
+        function Log_In() {
+            document.getElementById("demo1").style.display = "";
+            document.getElementById("demo2").style.display = "none";
+        }
+
+        // This function is called when the signup button is pressed
+        // function SignUp() {
+        document.getElementById("demo2").style.display = "none";
+        // }
+
+        function Sign_Up() {
+            document.getElementById("demo2").style.display = "";
+            document.getElementById("demo1").style.display = "none";
+        }
+
+        function Clear() {
+            document.getElementById("demo1").style.display = "none";
+            document.getElementById("demo2").style.display = "none";
+        }
+
+        function Home() {
+            document.getElementById("demo").style.display = "";
+        }
+    </script>
+</body>
+
+</html>
